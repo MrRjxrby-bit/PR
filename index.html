@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeMaster | Курс Frontend-разработки</title>
+    <title>CodeMaster | Главная</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <style>
@@ -84,6 +83,60 @@
         .button.is-primary:hover {
             background-color: #00b89c;
         }
+        
+        .navbar-item.is-active {
+            color: #00d1b2 !important;
+            font-weight: 600;
+            border-bottom: 2px solid #00d1b2;
+        }
+        
+        .accordion-card {
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .accordion-card .card-header {
+            background-color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .accordion-card .card-header:hover {
+            background-color: #f9f9f9;
+        }
+        .accordion-card .card-header-title {
+            font-weight: 500;
+            color: #363636;
+        }
+        .accordion-card .card-header-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-card.is-active .card-header-icon {
+            transform: rotate(45deg);
+        }
+        .accordion-card .card-content {
+            display: none;
+            border-top: 1px solid #ededed;
+        }
+        .accordion-card.is-active .card-content {
+            display: block;
+        }
+        
+        .form-feedback .field {
+            margin-bottom: 1.25rem;
+        }
+        .checkbox-custom {
+            color: #4a4a4a;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.75rem;
+        }
+        .contact-info i {
+            width: 1.8rem;
+            color: #00d1b2;
+        }
+        
     </style>
 </head>
 <body>
@@ -91,8 +144,8 @@
     <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#hero">
-                    <strong class="is-size-4 has-text-blacky">CodeMaster</strong>
+                <a class="navbar-item" href="index.html">
+                    <strong class="is-size-4 has-text-black">CodeMaster</strong>
                 </a>
                 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
@@ -104,16 +157,15 @@
 
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="#about">О курсе</a>
-                    <a class="navbar-item" href="#features">Преимущества</a>
-                    <a class="navbar-item" href="#reviews">Отзывы</a>
-                    <a class="navbar-item" href="#contacts">Контакты</a>
+                    <a class="navbar-item" href="index.html" id="nav-home">Главная</a>
+                    <a class="navbar-item" href="contacts.html" id="nav-contacts">Контакты / Отзывы</a>
+                    <a class="navbar-item" href="faq.html" id="nav-faq">FAQ</a>
                 </div>
 
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a href="#order" class="button is-primary">
+                            <a href="index.html#order" class="button is-primary">
                                 <strong>Записаться</strong>
                             </a>
                         </div>
@@ -133,13 +185,13 @@
                     Практика, менторство и реальные проекты в портфолио
                 </h2>
                 <div class="buttons is-centered mt-5">
-                    <a href="#order" class="button is-large is-light">
+                    <a href="index.html#order" class="button is-large is-light">
                         <span class="icon">
                             <i class="fas fa-graduation-cap"></i>
                         </span>
                         <span>Начать обучение</span>
                     </a>
-                    <a href="#about" class="button is-large is-outlined is-light">
+                    <a href="index.html#about" class="button is-large is-outlined is-light">
                         <span class="icon">
                             <i class="fas fa-info-circle"></i>
                         </span>
@@ -171,7 +223,7 @@
                         </p>
                     </div>
                     <div class="buttons mt-5">
-                        <a href="#order" class="button is-primary is-medium">
+                        <a href="index.html#order" class="button is-primary is-medium">
                             <span>Подробнее о программе</span>
                             <span class="icon">
                                 <i class="fas fa-arrow-right"></i>
@@ -181,7 +233,7 @@
                 </div>
                 <div class="column is-6 has-text-centered">
                     <figure class="image is-4by3">
-                        <img src="assets/images/o_curse.jpeg" 
+                        <img src="https://placehold.co/600x400/00d1b2/white?text=Online+Learning" 
                              alt="Онлайн обучение" 
                              class="about-image">
                     </figure>
@@ -274,8 +326,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <figure class="image is-64x64">
-                                    <img class="is-rounded" src="assets/images/anna.jpg" 
-                                         alt="Анна">
+                                    <img class="is-rounded" src="https://placehold.co/64x64/cccccc/white?text=A" alt="Анна">
                                 </figure>
                             </div>
                             <div class="media-content">
@@ -305,8 +356,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <figure class="image is-64x64">
-                                    <img class="is-rounded" src="assets/images/dima.jpg" 
-                                         alt="Дмитрий">
+                                    <img class="is-rounded" src="https://placehold.co/64x64/cccccc/white?text=D" alt="Дмитрий">
                                 </figure>
                             </div>
                             <div class="media-content">
@@ -336,8 +386,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <figure class="image is-64x64">
-                                    <img class="is-rounded" src="assets/images/lena.jpg" 
-                                         alt="Елена">
+                                    <img class="is-rounded" src="https://placehold.co/64x64/cccccc/white?text=E" alt="Елена">
                                 </figure>
                             </div>
                             <div class="media-content">
@@ -364,7 +413,7 @@
             </div>
             
             <div class="has-text-centered mt-5">
-                <a href="#order" class="button is-primary is-large">
+                <a href="index.html#order" class="button is-primary is-large">
                     Присоединиться к студентам
                 </a>
             </div>
@@ -431,7 +480,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </span>
                         Москва, пр. Вернандского, 78
-                    </p>-
+                    </p>
                 </div>
                 <div class="column is-4">
                     <h4 class="title is-5 has-text-black">Мы в соцсетях</h4>
@@ -477,16 +526,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            
             $navbarBurgers.forEach(el => {
                 el.addEventListener('click', () => {
                     const target = el.dataset.target;
                     const $target = document.getElementById(target);
-                    
                     el.classList.toggle('is-active');
                     $target.classList.toggle('is-active');
                 });
             });
+            
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            if (currentPage === 'index.html') {
+                document.getElementById('nav-home')?.classList.add('is-active');
+            } else if (currentPage === 'contacts.html') {
+                document.getElementById('nav-contacts')?.classList.add('is-active');
+            } else if (currentPage === 'faq.html') {
+                document.getElementById('nav-faq')?.classList.add('is-active');
+            }
         });
     </script>
 </body>
